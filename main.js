@@ -2,13 +2,13 @@
 
 function init() {
   // Must include width and height of content in px
-  const catalog = new Catalog('921', '1196')
+  const catalog = new DocumentPage('921', '1196')
 }
 document.addEventListener("DOMContentLoaded", () => {
   init()
 });
 
-class Catalog {
+class DocumentPage {
   constructor(width, height) {
     this.debug = false
     this.content_width = width

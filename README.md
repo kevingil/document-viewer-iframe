@@ -3,6 +3,8 @@
 
 Drop in file, easy to use.
 
+![demo](https://cdn.kevingil.com/document-viewer-iframe.png)
+
 ## How to use
 Just add main.js and main.css to the header of your file
 
