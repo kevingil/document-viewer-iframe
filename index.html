@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<head>
+    
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/normalize.css@8.0.1/normalize.css">
+  <script src="https://kit.fontawesome.com/99fbdcde4b.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@1/css/pico.min.css">
+    <link  rel="stylesheet" type="text/css" href="https://macpac1.com/global.css"></link>
+</head>
+<body>
+    <div id="wrap">
+        
+  <span id="pageNumber">
+    <article align="center">
+      <header>
+        <p class="title">MacMurray Pacific Catalog</p>
+      </header>
+      
+      <p class="title-m">Jump to Page</p>
+      <div class="catalog-controls">  
+        <input type="text" class="catalogPage" id="jumpToPage" v-bind:value="currentPage" @keyup.enter="jumpToPage">
+        <button @click="jumpToPage" value="">GO</button>
+      </div>
+      <div class="catalog-viewer">
+        <button @click="showPage(-1)" class="previous side secondary" v-bind:style="{visibility: currentIndex > 0 ? 'visible' : 'hidden'}">
+          <svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 320 512"><path d="M9.4 233.4c-12.5 12.5-12.5 32.8 0 45.3l192 192c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L77.3 256 246.6 86.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-192 192z"/></svg>
+        </button>
+        <div id="iframe1-container">
+        <iframe id="iframe1" class="cat-frame" src="page.html" ></iframe>
+      </div>
+        <button @click="showPage(1)" class="next side secondary" v-bind:style="{visibility: currentIndex < pageList.length - 1 ? 'visible' : 'hidden'}">
+          <svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 320 512"><path d="M310.6 233.4c12.5 12.5 12.5 32.8 0 45.3l-192 192c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3L242.7 256 73.4 86.6c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0l192 192z"/></svg>
+        </button>
+      </div>
+    </article>
+  </span>
+  <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.min.js"></script>
+  <script>
+  </script>
+  
+  </div><!--end content box (tabs)-->
+
+</div>
+</body>
